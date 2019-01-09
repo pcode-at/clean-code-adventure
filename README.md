@@ -1,8 +1,8 @@
 ## Setup project
-1. Clone project: `$ git clone https://gitlab.com/npeham/js-bootcamp.git`
-2. Navigate in `js-bootcamp` folder
+1. Clone project: `$ git clone https://github.com/pcode-at/clean-code-adventure.git`
+2. Navigate in the `clean-code-adventure` folder
 3. Install node_modules: `$ yarn install`
-4. Checkout actual branch: `$ git checkout js-vanilla/array`
+4. Checkout actual branch: `$ git checkout <firstname-lastname>` (like: `$ git checkout nico-peham`)
 
 ## Run test
 `$ yarn test`
@@ -24,7 +24,7 @@ If one test is working you can commit and push your code as follows:
 ## Creating a Merge request
 If all given tests are working than you can open a Merge request for signaling that your code is ready to be reviewed:
 1. Make sure you have pushed all your code
-2. Go to: https://gitlab.com/npeham/js-bootcamp/branches
+2. Go to: https://github.com/pcode-at/clean-code-adventure/branches
 3. Click on the button "Merge request" of your actual branch
 4. Give it a proper name like "working tests js-vanilla/array"
 5. If you want to add further informations then put it in the comment section
