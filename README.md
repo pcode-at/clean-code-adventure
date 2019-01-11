@@ -15,5 +15,7 @@
 3. At least create a pull request to our repository.
 4. Wait for our review.
 
+  And please don't feel hesitate to contact us if you have any question. 
+
 ### Happy coding!
 
