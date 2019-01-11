@@ -1,35 +1,19 @@
 ## Setup project
-1. Clone project: `$ git clone https://github.com/pcode-at/clean-code-adventure.git`
-2. Navigate in the `clean-code-adventure` folder
-3. Install node_modules: `$ yarn install`
-4. Checkout actual branch: `$ git checkout <firstname-lastname>` (like: `$ git checkout nico-peham`)
+1. Fork this project.
+2. After you have cloned your forked version navigate into the `clean-code-adventure` folder.
+3. Install node_modules: `$ yarn install`.
 
-## Run test
-`$ yarn test`
+## Run tests
+1. After you successfully cloned the project and installed thhe node_modules you can run the tests with `$ yarn test`. On the first run of this command all tests should be red.
+2. Navigate in the folder `src/vanilla-js`. Here you see these 3 folders: `algorithms`, `array` and `object`. In each folder you can find a `.js` and `.test.js` file. Just edit the `.js` files.
+3. After you are confident that your code is working you can run `$ yarn test` again. 
+4. Continue coding until every test is green!
 
-## Pull and fetch
-If something has changed in the remote repository you have to pull or fetch these changes:
-1. pull: `$ git pull`
-2. fetch: `$ git fetch`
+## Creating a pull request
+1. Make sure all tests are passing by running `$ yarn test`.
+2. Please format your code with your IDE (Visual Studio Code highly recommended).
+3. At least create a pull request to our repository.
+4. Wait for our review.
 
-## Commit & Push code
-If one test is working you can commit and push your code as follows:
-1. Add files to working tree: `$ git add .`
-2. Commit changes: `$ git commit -m "commit message"`
-3. Push commit(s) to remote repository: `$ git push`
-
-**Tip**: You can also use the git features that your IDE, like VS Code, provides you.
-
-
-## Creating a Merge request
-If all given tests are working than you can open a Merge request for signaling that your code is ready to be reviewed:
-1. Make sure you have pushed all your code
-2. Go to: https://github.com/pcode-at/clean-code-adventure/branches
-3. Click on the button "Merge request" of your actual branch
-4. Give it a proper name like "working tests js-vanilla/array"
-5. If you want to add further informations then put it in the comment section
-6. Choose 'npeham' as Assignee
-7. Don't change source or target branch
-8. Select "Squash commits when merge request is accepted."
-9. Click on "Submit merge request"
+### Happy coding!
 
