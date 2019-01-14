@@ -4,7 +4,7 @@ describe("euclidean algorithm", () => {
   it('should return the correct ggt for both numbers - level 1', () => {
     const numberOne = 100;
     const numberTwo = 20;
-    expect(getGgtUsingEuclideanAlgorithm(numberOne, numberTwo)).toBe(5);
+    expect(getGgtUsingEuclideanAlgorithm(numberOne, numberTwo)).toBe(20);
   }),
   it('should return the correct ggt for both numbers - level 2', () => {
     const numberOne = 6666;
