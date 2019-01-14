@@ -1,16 +1,13 @@
 export const fncs = {
   getFirstNameOfPerson: (person) => {
-
-    return '';
+    return person.firstName;
   },
 
   getFirstNameAndLastNameOfPerson: (person) => {
-
-    return '';
+    return person.firstName + ' ' + person.lastName;
   },
 
   getAgeOfPerson: (person) => {
-
-    return 0;
+    return 2018 - parseInt(person.dateOfBirth.split('.')[2]);
   }
-}
+};
