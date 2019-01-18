@@ -64,7 +64,7 @@ export const fncs = {
     let sum = 0;
 
     for (let number of numbers) {
-      if (number % 2 != 0) {
+      if (number % 2 !== 0) {
         sum += number
       }
     }
@@ -76,7 +76,7 @@ export const fncs = {
     let sum = 0;
 
     for (let number of numbers) {
-      if (number % 2 == 0) {
+      if (number % 2 === 0) {
         sum += number;
       }
     }
@@ -85,15 +85,22 @@ export const fncs = {
   },
 
   addNumberToArray: (numbers, addNumber) => {
-    numbers[numbers.length] = addNumber;
-    return numbers;
+    let newArray = [];
+
+    for (let i in numbers) {
+      newArray[i] = numbers[i];
+    }
+
+    newArray[newArray.length] = addNumber;
+
+    return newArray;
   },
 
   removeNumberFromArray: (numbers, removeNumber) => {
     let newArray = [];
 
     for (let number of numbers) {
-      if (number != removeNumber) {
+      if (number !== removeNumber) {
         newArray[newArray.length] = number;
       }
     }
@@ -102,9 +109,13 @@ export const fncs = {
   },
 
   sortArrayAscending: numbers => {
-    let newArray = numbers;
+    let newArray = [];
 
-    for (let i = numbers.length - 1; i >= 0; i--) {
+    for (let i in numbers) {
+      newArray[i] = numbers[i];
+    }
+
+    for (let i = newArray.length - 1; i >= 0; i--) {
       for (let j = 0; j < i; j++) {
         if (newArray[j] > newArray[j + 1]) {
           let help = newArray[j];
@@ -119,9 +130,13 @@ export const fncs = {
   },
 
   sortArrayDescending: numbers => {
-    let newArray = numbers;
+    let newArray = [];
 
-    for (let i = numbers.length - 1; i >= 0; i--) {
+    for (let i in numbers) {
+      newArray[i] = numbers[i];
+    }
+
+    for (let i = newArray.length - 1; i >= 0; i--) {
       for (let j = 0; j < i; j++) {
         if (newArray[j] < newArray[j + 1]) {
           let help = newArray[j + 1];

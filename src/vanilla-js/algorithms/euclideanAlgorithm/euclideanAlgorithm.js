@@ -11,7 +11,7 @@ export const getGgtUsingEuclideanAlgorithm = (numberOne = 0, numberTwo = 0) => {
     smallerNumber = numberOne;
   }
 
-  while (greaterNumber % smallerNumber != 0) {
+  while (greaterNumber % smallerNumber !== 0) {
     let residual = greaterNumber % smallerNumber;
 
     greaterNumber = smallerNumber;
