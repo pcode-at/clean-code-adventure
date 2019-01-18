@@ -43,12 +43,11 @@ describe('array', () =>
       let numbers = [5, 7, 3, 10, 8, 12, 13];
       const removeNumber = 8;
       const numbersWithRemovedNumber = [5, 7, 3, 10, 12, 13];
-      fncs.removeNumberFromArray(numbers, removeNumber);
-      expect(numbers).toEqual(numbersWithRemovedNumber);
+      expect(fncs.removeNumberFromArray(numbers, removeNumber)).toEqual(numbersWithRemovedNumber);
     }),
     it('sort array ascending', () => {
       let numbers = [5, 7, 3, 10, 8, 12, 13];
-      const numbersSorted = [3, 5, 7, 8, 10, 12, 13]
+      const numbersSorted = [3, 5, 7, 8, 10, 12, 13];
       fncs.sortArrayAscending(numbers);
       expect(numbers).toEqual(numbersSorted);
     }),
