@@ -1,43 +1,127 @@
 import { array } from "prop-types";
 
 export const fncs = {
-  calculateSumOfNumbers: numbers => {
-    return 0;
-  },
+    calculateSumOfNumbers: numbers => {
+        let sum = 0;
 
-  getBiggestNumber: numbers => {
-    return 0;
-  },
+        for (let i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+        return sum;
+    },
 
-  getSmallestNumber: numbers => {
-    return 0;
-  },
+    getBiggestNumber: numbers => {
+        let biggestNum = numbers[0];
 
-  getSecondBiggestNumber: numbers => {
-    return 0;
-  },
+        for (let i = 1; i < numbers.length; i++) {
+            if (numbers[i] > biggestNum) {
+                biggestNum = numbers[i];
+            }
+        }
+        return biggestNum;
+    },
 
-  calculateSumOfOddNumbers: numbers => {
-    return 0;
-  },
+    getSmallestNumber: numbers => {
+        let smallestNum = numbers[0];
 
-  calculateSumOfEvenNumbers: numbers => {
-    return 0;
-  },
+        for (let i = 1; i < numbers.length; i++) {
+            if (numbers[i] < smallestNum) {
+                smallestNum = numbers[i];
+            }
+        }
+        return smallestNum;
+    },
 
-  addNumberToArray: (numbers, addNumber) => {
-    return numbers;
-  },
+    getSecondBiggestNumber: numbers => {
+        let biggestNum = numbers[0];
+        let secondBiggestNum = numbers[0];
 
-  removeNumberFromArray: (numbers, removeNumber) => {
-    return numbers;
-  },
+        for (let i = 1; i < numbers.length; i++) {
+            if (numbers[i] > biggestNum) {
+                biggestNum = numbers[i];
+            }
+        }
 
-  sortArrayAscending: numbers => {
-    return numbers;
-  },
+        for (let i = 1; i < numbers.length; i++) {
+            if (numbers[i] > secondBiggestNum && numbers[i] < biggestNum) {
+                secondBiggestNum = numbers[i];
+            }
+        }
+        return secondBiggestNum;
+    },
 
-  sortArrayDescending: numbers => {
-    return numbers;
-  }
+    calculateSumOfOddNumbers: numbers => {
+        let sum = 0;
+
+        for (let i = 0; i < numbers.length; i++) {
+            if ((numbers[i] % 2) !== 0) {
+                sum += numbers[i];
+            }
+        }
+        return sum;
+    },
+
+    calculateSumOfEvenNumbers: numbers => {
+        let sum = 0;
+
+        for (let i = 0; i < numbers.length; i++) {
+            if ((numbers[i] % 2) === 0) {
+                sum += numbers[i];
+            }
+        }
+        return sum;
+    },
+
+    addNumberToArray: (numbers, addNumber) => {
+        numbers[numbers.length] = addNumber;
+
+        return numbers;
+    },
+
+    removeNumberFromArray: (numbers, removeNumber) => {
+        let myArray = [];
+
+        for (let number of numbers) {
+            if (number !== removeNumber) {
+                myArray[myArray.length] = number;
+            }
+        }
+        return myArray;
+    },
+
+    sortArrayAscending: numbers => {
+        let myArray = [];
+
+        for (let i in numbers)
+            myArray[i] = numbers[i];
+
+        for (let i = myArray.length - 1; i >= 0; i--) {
+            for (let j = 0; j < i; j++) {
+                if (myArray[j] > myArray[j + 1]) {
+                    let rack = myArray[j];
+                    myArray[j] = myArray[j + 1];
+                    myArray[j + 1] = rack;
+                }
+            }
+        }
+        return myArray;
+    },
+
+    sortArrayDescending: numbers => {
+        let myArray = [];
+
+        for (let i in numbers)
+            myArray[i] = numbers[i];
+
+        for (let i = myArray.length - 1; i >= 0; i--) {
+            for (let j = 0; j < i; j++) {
+                if (myArray[j] < myArray[j + 1]) {
+                    let rack = myArray[j + 1];
+                    myArray[j + 1] = myArray[j];
+                    myArray[j] = rack;
+                }
+            }
+        }
+        return myArray;
+    }
 };
