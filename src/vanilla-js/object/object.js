@@ -13,29 +13,29 @@ export const fncs = {
         person.dateOfBirth = new Date(parseInt(date[2]), parseInt(date[1]), parseInt(date[0]) - 1);
         let currentAge = localDate.getFullYear() - person.dateOfBirth.getFullYear();
 
-        if (monthIsLowerThan() || monthIsEqualTo() && dayIsLowerThan() || dayIsEqualTo()) {
+        if (isMonthLowerThan() || isMonthEqualTo() && isDayLowerThan() || isDayEqualTo()) {
             return currentAge - 1;
         }
 
-        function monthIsLowerThan() {
+        function isMonthLowerThan() {
             if (localDate.getMonth() < person.dateOfBirth.getMonth()) {
                 return true;
             }
         }
 
-        function monthIsEqualTo() {
+        function isMonthEqualTo() {
             if (localDate.getMonth() === person.dateOfBirth.getMonth()) {
                 return true;
             }
         }
 
-        function dayIsLowerThan() {
+        function isDayLowerThan() {
             if (localDate.getDay < person.dateOfBirth.getDay) {
                 return true;
             }
         }
 
-        function dayIsEqualTo() {
+        function isDayEqualTo() {
             if (localDate.getDay === person.dateOfBirth.getDay) {
                 return true;
             }
