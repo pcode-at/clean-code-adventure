@@ -16,27 +16,25 @@ export const fncs = {
         if (monthIsLowerThan() || monthIsEqualTo() && dayIsLowerThan() || dayIsEqualTo()) {
             return currentAge - 1;
         }
-        
-        // return currentAge;
-        
+
         function monthIsLowerThan() {
             if (localDate.getMonth() < person.dateOfBirth.getMonth()) {
                 return true;
             }
         }
-        
+
         function monthIsEqualTo() {
             if (localDate.getMonth() === person.dateOfBirth.getMonth()) {
                 return true;
             }
         }
-        
+
         function dayIsLowerThan() {
             if (localDate.getDay < person.dateOfBirth.getDay) {
                 return true;
             }
         }
-        
+
         function dayIsEqualTo() {
             if (localDate.getDay === person.dateOfBirth.getDay) {
                 return true;
