@@ -124,7 +124,7 @@ describe('functional programming', () => {
   });
 });
 
-// filter customer by name
-// filter order by category (kids)
+// filter orders by customerName
+// filter items of order by category (kids)
 // map for get array of prices
 // reduce for total price
