@@ -116,8 +116,6 @@ describe('functional programming', () => {
       },
     ];
 
-    console.log(filterOrdersByCustomerNameImperative);
-
     expect(filterOrdersByCustomerNameDeclarative(orders, 'John Doe')).toEqual(
       filteredOrders,
     );
