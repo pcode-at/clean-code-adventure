@@ -1,7 +1,10 @@
 import { Order } from './model/Order.model';
 import { Customer } from './model/Customer.model';
 import { Category } from './enum/Category.enum';
-import { filterOrdersByCustomerNameImperative } from './functionalProgramming';
+import {
+  filterOrdersByCustomerNameImperative,
+  filterOrdersByCustomerNameDeclarative,
+} from './functionalProgramming';
 
 describe('functional programming', () => {
   const customers: Customer[] = [
@@ -115,7 +118,7 @@ describe('functional programming', () => {
 
     console.log(filterOrdersByCustomerNameImperative);
 
-    expect(filterOrdersByCustomerNameImperative(orders, 'John Doe')).toBe(
+    expect(filterOrdersByCustomerNameDeclarative(orders, 'John Doe')).toEqual(
       filteredOrders,
     );
   });

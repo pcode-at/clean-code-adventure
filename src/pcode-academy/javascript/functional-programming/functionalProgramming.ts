@@ -5,5 +5,17 @@ export const filterOrdersByCustomerNameImperative = (
   customerName: string,
 ): Order[] => {
   const filteredOrders: Order[] = [];
+  orders.forEach(order => {
+    if (order.customer.name === customerName) {
+      filteredOrders.push(order);
+    }
+  });
   return filteredOrders;
+};
+
+export const filterOrdersByCustomerNameDeclarative = (
+  orders: Order[],
+  customerName: string,
+): Order[] => {
+  return [];
 };
