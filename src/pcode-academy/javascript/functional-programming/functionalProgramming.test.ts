@@ -2,9 +2,10 @@ import { Order } from './model/Order.model';
 import { Customer } from './model/Customer.model';
 import { Category } from './enum/Category.enum';
 import {
-  filterOrdersByCustomerNameImperative,
   filterOrdersByCustomerNameDeclarative,
+  filterItemsByCategoryDeclarative,
 } from './functionalProgramming';
+import { Item } from './model/Item.model';
 
 describe('functional programming', () => {
   const customers: Customer[] = [
@@ -119,6 +120,33 @@ describe('functional programming', () => {
     expect(filterOrdersByCustomerNameDeclarative(orders, 'John Doe')).toEqual(
       filteredOrders,
     );
+  });
+
+  it('should return items filterd by category Kids', () => {
+    const filteredItems: Item[] = [
+      {
+        name: 'T-Shirt',
+        price: 15,
+        category: Category.Kids,
+      },
+      {
+        name: 'T-Shirt',
+        price: 15,
+        category: Category.Kids,
+      },
+      {
+        name: 'Socks',
+        price: 15,
+        category: Category.Kids,
+      },
+    ];
+
+    expect(
+      filterItemsByCategoryDeclarative(
+        [...orders[0].items, ...orders[1].items],
+        Category.Kids,
+      ),
+    ).toEqual(filteredItems);
   });
 });
 
