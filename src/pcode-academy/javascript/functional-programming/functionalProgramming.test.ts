@@ -5,6 +5,7 @@ import {
   filterOrdersByCustomerNameDeclarative,
   filterItemsByCategoryDeclarative,
   getItemsOfOrdersDeclarative,
+  getTotalPriceOfItemsDeclarative,
 } from './functionalProgramming';
 import { Item } from './model/Item.model';
 
@@ -123,7 +124,7 @@ describe('functional programming', () => {
     );
   });
 
-  it.only('should return all items of passed orders', () => {
+  it('should return all items of passed orders', () => {
     const items: Item[] = [...orders[0].items, ...orders[1].items];
 
     expect(getItemsOfOrdersDeclarative([orders[0], orders[1]])).toEqual(items);
@@ -155,9 +156,15 @@ describe('functional programming', () => {
       ),
     ).toEqual(filteredItems);
   });
+
+  it.only('should return total price of passed items', () => {
+    expect(
+      getTotalPriceOfItemsDeclarative([...orders[0].items, ...orders[1].items]),
+    ).toEqual(165);
+  });
 });
 
 // filter orders by customerName
+// map orders to items
 // filter items of order by category (kids)
-// map for get array of prices
 // reduce for total price
