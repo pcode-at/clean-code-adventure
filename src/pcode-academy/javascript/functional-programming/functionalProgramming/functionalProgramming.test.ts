@@ -118,7 +118,7 @@ describe('functional programming', () => {
       },
     ];
 
-    expect(filterOrdersByCustomerNameDeclarative(orders, 'John Doe')).toEqual(
+    expect(filterOrdersByCustomerNameDeclarative('John Doe')(orders)).toEqual(
       filteredOrders,
     );
   });
@@ -149,10 +149,10 @@ describe('functional programming', () => {
     ];
 
     expect(
-      filterItemsByCategoryDeclarative(
-        [...orders[0].items, ...orders[1].items],
-        Category.Kids,
-      ),
+      filterItemsByCategoryDeclarative(Category.Kids)([
+        ...orders[0].items,
+        ...orders[1].items,
+      ]),
     ).toEqual(filteredItems);
   });
 
@@ -162,7 +162,7 @@ describe('functional programming', () => {
     ).toEqual(165);
   });
 
-  it.only('should return the total price of items with the category kids of the order from Benjamin Steiner', () => {
+  it('should return the total price of items with the category kids of the order from Benjamin Steiner', () => {
     expect(
       getTotalPriceByCustomerNameAndCategoryPipe(
         orders,
