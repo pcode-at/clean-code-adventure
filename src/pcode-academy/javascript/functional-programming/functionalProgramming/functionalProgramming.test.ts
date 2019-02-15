@@ -1,13 +1,11 @@
-import { Order } from './model/Order.model';
-import { Customer } from './model/Customer.model';
-import { Category } from './types/Category.enum';
-import {
-  filterOrdersByCustomerNameDeclarative,
-  filterItemsByCategoryDeclarative,
-  getItemsOfOrdersDeclarative,
-  getTotalPriceOfItemsDeclarative,
-} from './functionalProgramming';
-import { Item } from './model/Item.model';
+import { Order } from '../model/Order.model';
+import { Customer } from '../model/Customer.model';
+import { Category } from '../types/Category.enum';
+import { getTotalPriceOfItemsDeclarative } from './getTotalPriceOfItems';
+import { Item } from '../model/Item.model';
+import { filterOrdersByCustomerNameDeclarative } from './filterOrdersByCustomerName';
+import { getItemsOfOrdersDeclarative } from './getItemsOfOrders';
+import { filterItemsByCategoryDeclarative } from './filterItemsByCategory';
 
 describe('functional programming', () => {
   const customers: Customer[] = [
@@ -157,7 +155,7 @@ describe('functional programming', () => {
     ).toEqual(filteredItems);
   });
 
-  it.only('should return total price of passed items', () => {
+  it('should return total price of passed items', () => {
     expect(
       getTotalPriceOfItemsDeclarative([...orders[0].items, ...orders[1].items]),
     ).toEqual(165);
