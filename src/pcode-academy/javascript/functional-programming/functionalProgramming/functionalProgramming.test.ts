@@ -95,31 +95,10 @@ describe('functional programming', () => {
   ];
 
   it('should return orders filterd by customer name John Doe', () => {
-    const filteredOrders: Order[] = [
-      {
-        customer: customers[0],
-        items: [
-          {
-            name: 'T-Shirt',
-            price: 15,
-            category: Category.Kids,
-          },
-          {
-            name: 'T-Shirt',
-            price: 30,
-            category: Category.Men,
-          },
-          {
-            name: 'T-Shirt',
-            price: 30,
-            category: Category.Women,
-          },
-        ],
-      },
-    ];
+    const ordersOfJohnDoe: Order[] = [orders[0]];
 
     expect(filterOrdersByCustomerNameDeclarative('John Doe')(orders)).toEqual(
-      filteredOrders,
+      ordersOfJohnDoe,
     );
   });
 
@@ -172,8 +151,3 @@ describe('functional programming', () => {
     ).toEqual(54);
   });
 });
-
-// filter orders by customerName
-// map orders to items
-// filter items of order by category (kids)
-// reduce for total price
