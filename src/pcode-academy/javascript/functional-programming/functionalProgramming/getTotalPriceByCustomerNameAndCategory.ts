@@ -1,3 +1,5 @@
+import { pipe } from 'ramda';
+
 import { Order } from '../model/Order.model';
 import { Category } from '../types/Category.enum';
 import { filterOrdersByCustomerNameImperative } from './filterOrdersByCustomerName';
@@ -11,19 +13,19 @@ export const getTotalPriceByCustomerNameAndCategory = (
   category: Category,
 ): number => {
   const ordersFilterdByCustomerName = filterOrdersByCustomerNameImperative(
-    orders,
     customerName,
-  );
+  )(orders);
   const items = getItemsOfOrdersImperative(ordersFilterdByCustomerName);
-  const itemsWithCategoryKids = filterItemsByCategoryImperative(
+  const itemsWithCategoryKids = filterItemsByCategoryImperative(category)(
     items,
-    Category.Kids,
   );
   const totalPrice = getTotalPriceOfItemsImperative(itemsWithCategoryKids);
 
   return totalPrice;
 };
 
+// Here you should all the functions together you created so far.
+// In addition to that we want that you use the pipe function from ramda imported above
 export const getTotalPriceByCustomerNameAndCategoryPipe = (
   orders: Order[],
   customerName: string,

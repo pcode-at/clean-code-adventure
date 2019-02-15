@@ -2,9 +2,8 @@ import { Item } from '../model/Item.model';
 
 import { Category } from '../types/Category.enum';
 
-export const filterItemsByCategoryImperative = (
+export const filterItemsByCategoryImperative = (category: Category) => (
   items: Item[],
-  category: Category,
 ): Item[] => {
   const filteredItems: Item[] = [];
   items.forEach(item => {

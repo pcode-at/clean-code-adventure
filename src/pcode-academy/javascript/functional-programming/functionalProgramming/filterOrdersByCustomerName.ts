@@ -1,8 +1,7 @@
 import { Order } from '../model/Order.model';
 
-export const filterOrdersByCustomerNameImperative = (
+export const filterOrdersByCustomerNameImperative = (customerName: string) => (
   orders: Order[],
-  customerName: string,
 ): Order[] => {
   const filteredOrders: Order[] = [];
   orders.forEach(order => {
