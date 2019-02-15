@@ -4,6 +4,7 @@ import { Category } from './enum/Category.enum';
 import {
   filterOrdersByCustomerNameDeclarative,
   filterItemsByCategoryDeclarative,
+  getItemsOfOrdersDeclarative,
 } from './functionalProgramming';
 import { Item } from './model/Item.model';
 
@@ -120,6 +121,12 @@ describe('functional programming', () => {
     expect(filterOrdersByCustomerNameDeclarative(orders, 'John Doe')).toEqual(
       filteredOrders,
     );
+  });
+
+  it.only('should return all items of passed orders', () => {
+    const items: Item[] = [...orders[0].items, ...orders[1].items];
+
+    expect(getItemsOfOrdersDeclarative([orders[0], orders[1]])).toEqual(items);
   });
 
   it('should return items filterd by category Kids', () => {
