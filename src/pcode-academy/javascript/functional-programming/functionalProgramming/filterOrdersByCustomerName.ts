@@ -12,9 +12,8 @@ export const filterOrdersByCustomerNameImperative = (customerName: string) => (
   return filteredOrders;
 };
 
-export const filterOrdersByCustomerNameDeclarative = (
+export const filterOrdersByCustomerNameDeclarative = (customerName: string) => (
   orders: Order[],
-  customerName: string,
 ): Order[] => {
   return [];
 };

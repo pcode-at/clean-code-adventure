@@ -14,9 +14,8 @@ export const filterItemsByCategoryImperative = (category: Category) => (
   return filteredItems;
 };
 
-export const filterItemsByCategoryDeclarative = (
+export const filterItemsByCategoryDeclarative = (category: Category) => (
   items: Item[],
-  category: Category,
 ): Item[] => {
   return [];
 };
