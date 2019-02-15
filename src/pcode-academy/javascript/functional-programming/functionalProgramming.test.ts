@@ -1,8 +1,8 @@
-import { Order } from '../model/Order.model';
-import { Customer } from '../model/Customer.model';
-import { Category } from '../types/Category.enum';
+import { Order } from './model/Order.model';
+import { Customer } from './model/Customer.model';
+import { Category } from './types/Category.enum';
 import { getTotalPriceOfItemsDeclarative } from './getTotalPriceOfItems';
-import { Item } from '../model/Item.model';
+import { Item } from './model/Item.model';
 import { filterOrdersByCustomerNameDeclarative } from './filterOrdersByCustomerName';
 import { getItemsOfOrdersDeclarative } from './getItemsOfOrders';
 import { filterItemsByCategoryDeclarative } from './filterItemsByCategory';

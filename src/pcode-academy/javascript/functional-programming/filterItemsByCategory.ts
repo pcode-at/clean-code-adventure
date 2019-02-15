@@ -1,6 +1,6 @@
-import { Item } from '../model/Item.model';
+import { Item } from './model/Item.model';
 
-import { Category } from '../types/Category.enum';
+import { Category } from './types/Category.enum';
 
 export const filterItemsByCategoryImperative = (category: Category) => (
   items: Item[],

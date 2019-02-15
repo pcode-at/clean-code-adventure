@@ -1,4 +1,4 @@
-import { Item } from '../model/Item.model';
+import { Item } from './model/Item.model';
 
 export const getTotalPriceOfItemsImperative = (items: Item[]): number => {
   let sum = 0;

@@ -1,6 +1,6 @@
-import { Order } from '../model/Order.model';
+import { Order } from './model/Order.model';
 
-import { Item } from '../model/Item.model';
+import { Item } from './model/Item.model';
 
 export const getItemsOfOrdersImperative = (orders: Order[]): Item[] => {
   let items: Item[] = [];

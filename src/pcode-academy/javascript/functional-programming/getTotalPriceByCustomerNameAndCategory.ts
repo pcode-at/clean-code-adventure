@@ -1,7 +1,7 @@
 import { pipe } from 'ramda';
 
-import { Order } from '../model/Order.model';
-import { Category } from '../types/Category.enum';
+import { Order } from './model/Order.model';
+import { Category } from './types/Category.enum';
 import { filterOrdersByCustomerNameImperative } from './filterOrdersByCustomerName';
 import { getItemsOfOrdersImperative } from './getItemsOfOrders';
 import { filterItemsByCategoryImperative } from './filterItemsByCategory';

@@ -1,4 +1,4 @@
-import { Order } from '../model/Order.model';
+import { Order } from './model/Order.model';
 
 export const filterOrdersByCustomerNameImperative = (customerName: string) => (
   orders: Order[],
