@@ -6,7 +6,7 @@ import { Item } from '../model/Item.model';
 import { filterOrdersByCustomerNameDeclarative } from './filterOrdersByCustomerName';
 import { getItemsOfOrdersDeclarative } from './getItemsOfOrders';
 import { filterItemsByCategoryDeclarative } from './filterItemsByCategory';
-import { getTotalPriceByCustomerNameAndCategory } from './getTotalPriceByCustomerNameAndCategory';
+import { getTotalPriceByCustomerNameAndCategoryPipe } from './getTotalPriceByCustomerNameAndCategory';
 
 describe('functional programming', () => {
   const customers: Customer[] = [
@@ -162,9 +162,9 @@ describe('functional programming', () => {
     ).toEqual(165);
   });
 
-  it.only('should return the total price of items with the category kids of the order from John Doe', () => {
+  it.only('should return the total price of items with the category kids of the order from Benjamin Steiner', () => {
     expect(
-      getTotalPriceByCustomerNameAndCategory(
+      getTotalPriceByCustomerNameAndCategoryPipe(
         orders,
         'Benjamin Steiner',
         Category.Kids,

@@ -1,4 +1,3 @@
-import { Item } from '../model/Item.model';
 import { Order } from '../model/Order.model';
 import { Category } from '../types/Category.enum';
 import { filterOrdersByCustomerNameImperative } from './filterOrdersByCustomerName';
@@ -26,7 +25,9 @@ export const getTotalPriceByCustomerNameAndCategory = (
 };
 
 export const getTotalPriceByCustomerNameAndCategoryPipe = (
-  items: Item[],
+  orders: Order[],
+  customerName: string,
+  category: Category,
 ): number => {
   return 0;
 };
