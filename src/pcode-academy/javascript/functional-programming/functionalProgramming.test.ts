@@ -1,6 +1,6 @@
 import { Order } from './model/Order.model';
 import { Customer } from './model/Customer.model';
-import { Category } from './enum/Category.enum';
+import { Category } from './types/Category.enum';
 import {
   filterOrdersByCustomerNameDeclarative,
   filterItemsByCategoryDeclarative,

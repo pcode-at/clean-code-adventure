@@ -1,5 +1,5 @@
 import { Order } from './model/Order.model';
-import { Category } from './enum/Category.enum';
+import { Category } from './types/Category.enum';
 import { Item } from './model/Item.model';
 
 export const filterOrdersByCustomerNameImperative = (
