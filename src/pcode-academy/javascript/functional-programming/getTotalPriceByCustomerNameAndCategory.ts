@@ -2,19 +2,17 @@ import { pipe } from 'ramda';
 
 import { Order } from './model/Order.model';
 import { Category } from './types/Category.enum';
-import { filterOrdersByCustomerNameImperative } from './filterOrdersByCustomerName';
-import { getItemsOfOrdersImperative } from './getItemsOfOrders';
-import { filterItemsByCategoryImperative } from './filterItemsByCategory';
-import { getTotalPriceOfItemsImperative } from './getTotalPriceOfItems';
+import { filterOrdersByCustomerNameImperative, filterOrdersByCustomerNameDeclarative } from './filterOrdersByCustomerName';
+import { getItemsOfOrdersImperative, getItemsOfOrdersDeclarative } from './getItemsOfOrders';
+import { filterItemsByCategoryImperative, filterItemsByCategoryDeclarative } from './filterItemsByCategory';
+import { getTotalPriceOfItemsImperative, getTotalPriceOfItemsDeclarative } from './getTotalPriceOfItems';
 
 export const getTotalPriceByCustomerNameAndCategory = (
   orders: Order[],
   customerName: string,
   category: Category,
 ): number => {
-  const ordersFilterdByCustomerName = filterOrdersByCustomerNameImperative(
-    customerName,
-  )(orders);
+  const ordersFilterdByCustomerName = filterOrdersByCustomerNameImperative(customerName,)(orders);
   const items = getItemsOfOrdersImperative(ordersFilterdByCustomerName);
   const itemsWithCategoryKids = filterItemsByCategoryImperative(category)(
     items,
@@ -24,12 +22,18 @@ export const getTotalPriceByCustomerNameAndCategory = (
   return totalPrice;
 };
 
-// Here you should all the functions together you created so far.
+// Here you should use all the functions together you created so far.
 // In addition to that we want that you use the pipe function from ramda imported above
 export const getTotalPriceByCustomerNameAndCategoryPipe = (
   orders: Order[],
   customerName: string,
   category: Category,
 ): number => {
-  return 0;
+  const filter = filterOrdersByCustomerNameDeclarative(customerName)(orders);
+  return pipe(
+    filterOrdersByCustomerNameDeclarative(customerName),
+    getItemsOfOrdersDeclarative,
+    filterItemsByCategoryDeclarative(category),
+    getTotalPriceOfItemsDeclarative
+  )(orders);
 };

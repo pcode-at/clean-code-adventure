@@ -11,5 +11,5 @@ export const getTotalPriceOfItemsImperative = (items: Item[]): number => {
 };
 
 export const getTotalPriceOfItemsDeclarative = (items: Item[]): number => {
-  return 0;
+  return items.reduce((acc, item) => acc + item.price, 0);
 };

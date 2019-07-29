@@ -13,5 +13,6 @@ export const getItemsOfOrdersImperative = (orders: Order[]): Item[] => {
 };
 
 export const getItemsOfOrdersDeclarative = (orders: Order[]): Item[] => {
-  return [];
+  const initialItem: Item[] = [];
+  return orders.reduce((accItems, order) => ([...accItems, ...order.items]), initialItem);
 };
