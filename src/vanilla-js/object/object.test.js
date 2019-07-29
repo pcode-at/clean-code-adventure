@@ -15,7 +15,8 @@ describe("oject", () => {
       expect(fncs.getFirstNameAndLastNameOfPerson(person)).toBe("John Doe");
     });
     it('should return the age of the person' , () => {
-      expect(fncs.getAgeOfPerson(person)).toBe(50);
+      let date = new Date(2019, 9, 5);
+      expect(fncs.getAgeOfPerson(person, date)).toBe(51);
     });
   });
 });

@@ -17,5 +17,6 @@ export const filterItemsByCategoryImperative = (category: Category) => (
 export const filterItemsByCategoryDeclarative = (category: Category) => (
   items: Item[],
 ): Item[] => {
-  return [];
+
+  return items.filter(item => item.category === category);
 };
