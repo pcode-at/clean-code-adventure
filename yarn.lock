@@ -52,7 +52,7 @@
   resolved "https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz"
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
 
-"@types/node@*", "@types/node@10.17.60":
+"@types/node@10.17.60":
   version "10.17.60"
   resolved "https://registry.npmjs.org/@types/node/-/node-10.17.60.tgz"
   integrity sha512-F0KIgDJfy2nA3zMLmWGKxcH2ZVEtCZXHHdOQs2gSaQ27+lNeEfGxzkIw90aXswATX7AZ33tahPbzy6KAfUreVw==
@@ -64,15 +64,14 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-dom@16.0.7":
-  version "16.0.7"
-  resolved "https://registry.npmjs.org/@types/react-dom/-/react-dom-16.0.7.tgz"
-  integrity sha512-vaq4vMaJOaNgFff1t3LnHYr6vRa09vRspMkmLdXtFZmO1fwDI2snP+dpOkwrtlU8UC8qsqemCu4RmVM2OLq/fA==
+"@types/react-dom@16.9.13":
+  version "16.9.13"
+  resolved "https://registry.npmjs.org/@types/react-dom/-/react-dom-16.9.13.tgz"
+  integrity sha512-34Hr3XnmUSJbUVDxIw/e7dhQn2BJZhJmlAaPyPwfTQyuVS9mV/CeyghFcXyvkJXxI7notQJz8mF8FeCVvloJrA==
   dependencies:
-    "@types/node" "*"
-    "@types/react" "*"
+    "@types/react" "^16"
 
-"@types/react@*", "@types/react@16.4.8":
+"@types/react@*", "@types/react@16.4.8", "@types/react@^16":
   version "16.4.8"
   resolved "https://registry.npmjs.org/@types/react/-/react-16.4.8.tgz"
   integrity sha512-i1bQXfUF2gItMpG9u9epR02DHLZEpXHON0I6z89vFvbOfGRMyMP1h6VxHTa9TpSJhXrYQjNhwTtLGJdvQA7kcA==
