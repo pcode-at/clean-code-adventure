@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@types/jest": "23.3.14",
-    "@types/node": "10.5.7",
+    "@types/node": "10.17.60",
     "@types/react": "16.4.8",
     "@types/react-dom": "16.0.7",
     "prettier": "1.16.4",
