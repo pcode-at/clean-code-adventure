@@ -64,14 +64,14 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-dom@16.9.13":
-  version "16.9.13"
-  resolved "https://registry.npmjs.org/@types/react-dom/-/react-dom-16.9.13.tgz"
-  integrity sha512-34Hr3XnmUSJbUVDxIw/e7dhQn2BJZhJmlAaPyPwfTQyuVS9mV/CeyghFcXyvkJXxI7notQJz8mF8FeCVvloJrA==
+"@types/react-dom@17.0.9":
+  version "17.0.9"
+  resolved "https://registry.npmjs.org/@types/react-dom/-/react-dom-17.0.9.tgz"
+  integrity sha512-wIvGxLfgpVDSAMH5utdL9Ngm5Owu0VsGmldro3ORLXV8CShrL8awVj06NuEXFQ5xyaYfdca7Sgbk/50Ri1GdPg==
   dependencies:
-    "@types/react" "^16"
+    "@types/react" "*"
 
-"@types/react@*", "@types/react@16.4.8", "@types/react@^16":
+"@types/react@*", "@types/react@16.4.8":
   version "16.4.8"
   resolved "https://registry.npmjs.org/@types/react/-/react-16.4.8.tgz"
   integrity sha512-i1bQXfUF2gItMpG9u9epR02DHLZEpXHON0I6z89vFvbOfGRMyMP1h6VxHTa9TpSJhXrYQjNhwTtLGJdvQA7kcA==
@@ -4490,7 +4490,7 @@ istanbul-lib-report@^1.1.5:
 
 istanbul-lib-source-maps@^1.1.0, istanbul-lib-source-maps@^1.2.6:
   version "1.2.6"
-  resolved "https://registry.npmjs.org/istanbul-lib-source-maps/-/istanbul-lib-source-maps-1.2.6.tgz"
+  resolved "https://registry.yarnpkg.com/istanbul-lib-source-maps/-/istanbul-lib-source-maps-1.2.6.tgz#37b9ff661580f8fca11232752ee42e08c6675d8f"
   integrity sha512-TtbsY5GIHgbMsMiRw35YBHGpZ1DVFEO19vxxeiDMYaeOFOCzfnYVxvl6pOUIZR4dtPhAGpSMup8OyF8ubsaqEg==
   dependencies:
     debug "^3.1.0"
@@ -5634,9 +5634,9 @@ natural-compare@^1.4.0:
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
 needle@^2.2.1:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/needle/-/needle-2.6.0.tgz#24dbb55f2509e2324b4a99d61f413982013ccdbe"
-  integrity sha512-KKYdza4heMsEfSWD7VPUIz3zX2XDwOyX2d+geb4vrERZMT5RMU6ujjaD+I5Yr54uZxQ2w6XRTAhHBbSCyovZBg==
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/needle/-/needle-2.8.0.tgz#1c8ef9c1a2c29dcc1e83d73809d7bc681c80a048"
+  integrity sha512-ZTq6WYkN/3782H1393me3utVYdq2XyqNUFBsprEE3VMAT0+hP/cItpnITpqsY6ep2yeFE4Tqtqwc74VqUlUYtw==
   dependencies:
     debug "^3.2.6"
     iconv-lite "^0.4.4"
